@@ -38,3 +38,100 @@
     }
   }
 }
+
+//menu overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.97;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translateY(-100%);
+    @include easeOut;
+
+    &.show {
+      //slide from top
+      transform: translateY(0);
+    }
+  }
+
+  //branding side
+  &-branding {
+    background: $primary-color;
+    transform: translateY(100%);
+    @include easeOut;
+
+    &.show {
+      //slide from bottom
+      transform: translateY(0);
+    }
+
+    .my-photo {
+      width: 250px;
+      height: 250px;
+      background: url(../img/portrait.jpg);
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translateX(600px);
+    @include easeOut;
+
+    &.show {
+      //slide from right
+      transform: translateX(0);
+    }
+
+    &.active>a {
+      color: $secondary-color;
+    }
+
+    .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+}
+
+//transition-delay for each nav-item
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
