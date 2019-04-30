@@ -1,16 +1,17 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+@import "variables";
+@import "mixins";
+@import "menu";
 
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
+
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: $primary-color;
+  @include background;
+  background: $primary-color;
   color: #ffffff;
   height: 100%;
   margin: 0;
