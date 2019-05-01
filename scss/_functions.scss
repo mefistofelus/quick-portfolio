@@ -1,0 +1,10 @@
+// динамически изменяемый цвет текста
+@function set-text-color($color) {
+  @if(lightness($color) > 40) {
+    @return #000000;
+  }
+
+  @else {
+    @return #ffffff;
+  }
+}

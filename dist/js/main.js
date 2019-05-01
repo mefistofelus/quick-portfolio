@@ -1,3 +1,4 @@
+// переменные для бургер-меню
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
@@ -6,6 +7,7 @@ const navItems = document.querySelectorAll(".nav-item");
 
 let showMenu = false;
 
+//обработка кликов по бургеру
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
