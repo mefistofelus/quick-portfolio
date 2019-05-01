@@ -25,7 +25,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
@@ -116,10 +116,18 @@ main {
     border-bottom: $secondary-color 5px solid;
 
     h3 {
-      text-transform: capitalize;
+      text-transform: uppercase;
+    }
+
+    h6 {
       color: $secondary-color;
     }
   }
+}
+
+.cv-download {
+  margin-top: 1.3rem;
+  text-align: center;
 }
 
 //мои работы/проекты
@@ -136,6 +144,36 @@ main {
       opacity: 0.8;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+
+  i {
+    margin-right: .5rem;
+  }
+}
+
+//contact page
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
   }
 }

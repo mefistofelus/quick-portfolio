@@ -57,14 +57,14 @@
       height: 250px;
       background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 3px #f8b702f1; }
+      border: solid 3px #12e8f0f1; }
   .menu .nav-item {
     transform: translateX(600px);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translateX(0); }
     .menu .nav-item.active > a {
-      color: #f8b702f1; }
+      color: #12e8f0f1; }
     .menu .nav-item .nav-link {
       display: inline-block;
       position: relative;
@@ -76,7 +76,7 @@
       text-decoration: none;
       transition: all 0.5s ease-out; }
       .menu .nav-item .nav-link:hover {
-        color: #f8b702f1; }
+        color: #12e8f0f1; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -122,7 +122,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -140,7 +140,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #f8b702f1; }
+  color: #12e8f0f1; }
 
 main {
   padding: 4rem;
@@ -150,7 +150,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #f8b702f1;
+        color: #12e8f0f1;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -166,7 +166,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #f8b702f1 3px solid; }
+    border: #12e8f0f1 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -179,10 +179,15 @@ main {
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #f8b702f1 5px solid; }
+    border-bottom: #12e8f0f1 5px solid; }
     .about-info .job h3 {
-      text-transform: capitalize;
-      color: #f8b702f1; }
+      text-transform: uppercase; }
+    .about-info .job h6 {
+      color: #12e8f0f1; }
+
+.cv-download {
+  margin-top: 1.3rem;
+  text-align: center; }
 
 .projects {
   display: grid;
@@ -193,8 +198,28 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.8;
-      border-color: #f8b702f1;
+      border-color: #12e8f0f1;
       transition: all 0.5s ease-out; }
+  .projects i {
+    margin-right: .5rem; }
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem; }
+  .contacts div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .contacts div:hover {
+      background: #12e8f0f1;
+      color: #000000; }
+      .contacts div:hover span {
+        color: #000000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -202,7 +227,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #f8b702f1;
+    background: #12e8f0f1;
     color: #000000; }
 
 .btn-dark {
